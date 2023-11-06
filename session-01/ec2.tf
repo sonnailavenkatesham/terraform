@@ -1,5 +1,5 @@
 resource "aws_instance" "i_will_decide" {
-    count = 10
+    count = length(var.instance_name)
     ami = var.ami_id
     instance_type = var.instance_type
     security_groups = [aws_security_group.allow_all.name]
@@ -9,7 +9,7 @@ resource "aws_instance" "i_will_decide" {
 }
 
 resource "aws_route53_record" "record" {
-  count = 10
+  count = length(var.instance_name)
   zone_id = "Z0997824248HW2XYA9N5U"
   name    = "${var.instance_name[count.index]}.venkateshamsonnalia143.online"
   type    = "A"

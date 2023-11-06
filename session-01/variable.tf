@@ -20,5 +20,5 @@ variable "tags" {
 
 variable "instance_name" {
     type = list(string)
-    default = ["mongodb", "cart", "catalogue", "user", "mysql", "redis", "rabbitMQ", "payment", "shipping", "web"]
+    default = ["mongodb", "cart", "catalogue", "user", "mysql", "payment", "web"]
 }
