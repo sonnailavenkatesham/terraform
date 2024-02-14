@@ -1,0 +1,42 @@
+pipeline {
+    agent { node { label 'AGENT' } }
+
+    stages {
+        stage('Terraform init') {
+            steps {
+                sh ''' 
+                    ls -l 
+                    pwd
+                '''
+            }
+        }
+        stage('Test') {
+            steps {
+                sh ''' 
+                    ls -l 
+                    pwd
+                '''
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh ''' 
+                    ls -l 
+                    pwd
+                '''
+            }
+        }
+    }
+
+    post{
+        success{
+            echo 'Successfull'
+        }
+        failure{
+            echo 'Failed'
+        }
+        always{
+            echo 'Hello Always'
+        }
+    }
+}
