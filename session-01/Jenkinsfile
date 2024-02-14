@@ -24,7 +24,7 @@ pipeline {
                 '''
             }
         }
-        stage('Deploy') {
+        stage('Terraform apply') {
             steps {
                 sh ''' 
                     ls -l
