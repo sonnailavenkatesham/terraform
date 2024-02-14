@@ -5,7 +5,8 @@ pipeline {
         stage('Terraform init') {
             steps {
                 sh ''' 
-                    ls -l 
+                    ls -l
+                    cd session-01
                     pwd
                 '''
             }
@@ -13,7 +14,8 @@ pipeline {
         stage('Test') {
             steps {
                 sh ''' 
-                    ls -l 
+                    ls -l
+                    cd session-01
                     pwd
                 '''
             }
@@ -21,7 +23,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh ''' 
-                    ls -l 
+                    ls -l
+                    cd session-01 
                     pwd
                 '''
             }
