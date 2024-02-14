@@ -26,7 +26,8 @@ pipeline {
         }
         stage('Terraform apply') {
             steps {
-                sh '''
+                sh ''' 
+                    ls -l
                     cd session-01 
                     pwd
                 '''
