@@ -8,15 +8,17 @@ pipeline {
                     ls -l
                     cd session-01
                     pwd
+                    terraform init
                 '''
             }
         }
-        stage('Test') {
+        stage('Terraform plan') {
             steps {
                 sh ''' 
                     ls -l
                     cd session-01
                     pwd
+                    terraform plan
                 '''
             }
         }
